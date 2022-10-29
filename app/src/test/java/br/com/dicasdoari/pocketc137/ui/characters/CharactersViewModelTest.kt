@@ -23,8 +23,8 @@ class CharactersViewModelTest {
     val rule = InstantTaskExecutorRule()
 
     private val repository = mockk<CharacterRepository>()
-    private val showCharactersEvent: Observer<List<CharacterDTO>> = mockk()
-    private val showErrorEvent: Observer<String> = mockk()
+    private val showCharactersEvent: Observer<List<CharacterDTO>> = mockk(relaxed = true)
+    private val showErrorEvent: Observer<String> = mockk(relaxed = true)
 
     @Before
     fun setUp() {
